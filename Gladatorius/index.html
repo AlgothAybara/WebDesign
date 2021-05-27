@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 
+        Author: Aaron Young
+        Date:   05/27/2021
+        File:   index.html
+     -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gladatorius</title>
+    <link href='https://fonts.googleapis.com/css?family=Caesar Dressing' rel='stylesheet'>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header container -->
+    <div id="container">
+        <img src="images\stoneTitle.png" id="plaque" alt="">
+        <div class="centered">
+            <h1>Gladatorius</h1>
+        </div>
+    </div>    
+    <main>
+        <!-- Player Select container -->
+        <div id="setup">
+            <div id="selectPlayers">
+                <form id="selectPlayer1">
+                    <h2>Player 1</h2>
+                    <img src="images/retiarius.jpg" class="display" id="display1">
+                    <label for="columns">Select a Gladiator</label>
+                    <select id="player1">
+                        <option value="0">Retiarius</option>
+                        <option value="1">Thracian</option>
+                        <option value="2">Bestiarus</option>
+                    </select>
+                </form>
+                <form id="selectPlayer2">
+                    <h2>Player 2</h2>
+                    <img src="images/retiarius.jpg" class="display" id="display2">
+                    <form id="selectPlayer1">
+                        <label for="columns">Select a Gladiator</label>
+                        <select id="player2">
+                            <option value="0">Retiarius</option>
+                            <option value="1">Thracian</option>
+                            <option value="2">Bestiarus</option>
+                        </select>
+                    </form>
+                </form>
+            </div>
+            <!-- Build Arena form container -->
+            <form id="buildArena">
+                <label for="columns">Select a width</label>
+                <select id="width">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <label for="columns">Select a height</label>
+                <select id="height">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </form>
+            <button id="build">Build Arena</button>
+        </div>
+        <!-- Game container - Initially hidden until form is submitted -->
+        <div id="game">
+            <div id="plyrDisp1" class="playerDisplay">
+                <h2 id="playerNum">Player 1</h2>
+                <img id="image">
+                <h4 id="type"></h4>
+                <hr>
+                <p id="health"></p>
+                <p id="attack"></p>
+                <p id="defense"></p>
+            </div>
+            <!-- Board container is filled when form is submitted -->
+            <div id="board">
+
+            </div>
+        </div>
+        <!-- User input area. User presses various buttons to complete actions. -->
+        <div id="stuff">
+            <div id="dice">
+                <h4>Movement Dice</h4>
+                <hr>
+                <div id="diceBottom" class="dice"></div>
+                <h4>Attack Roll</h4>
+                <hr>
+                <div id="attacker" class="dice"></div>
+                <h4>Defense Roll</h4>
+                <hr>
+                <div id="defender" class="dice"></div>
+            </div>
+            <div id="buttons">
+                <button id="attackButton">Attack</button>
+                <button id="roll">Roll</button>
+                <button id="endTurn">End Turn</button>
+            </div>
+            <div id="message"></div>
+        </div>
+    </main>
+    <!-- Loads the Javascript file after page loads -->
+    <script src="build.js"></script>
+</body>
+
+</html>
